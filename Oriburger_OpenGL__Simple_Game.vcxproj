@@ -72,12 +72,16 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\SDL2-devel-2.0.20-VC\SDL2-2.0.20\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\SDL2-devel-2.0.20-VC\SDL2-2.0.20\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\SDL2-devel-2.0.20-VC\SDL2-2.0.20\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\SDL2-devel-2.0.20-VC\SDL2-2.0.20\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -139,7 +143,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Sources\Game.cpp" />
     <ClCompile Include="Sources\Main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Sources\Game.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
